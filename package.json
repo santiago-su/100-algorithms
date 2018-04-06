@@ -1,0 +1,13 @@
+{
+  "name": "100-algorithms",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "test": "tape ./**/*.test.js"
+  },
+  "devDependencies": {
+    "tape": "^4.9.0"
+  }
+}
