@@ -7,6 +7,20 @@
 //
 
 
-const main() => {
-  
+// This can break the stack because of deep recursivity
+const main = (list, item, min, max) => {
+  const listMiddleIndex = (min + max) / 2 | 0;
+  if (item === list[listMiddleIndex]) {
+    return list[listMiddleIndex];
+  }
+  if (list[listMiddleIndex] < item) {
+    return main(list, item, listMiddleIndex + 1, max);
+  }
+  if (list[listMiddleIndex] > item) {
+    return main(list, item, min, listMiddleIndex - 1);
+  }
 }
+
+module.exports = {
+  main
+};
